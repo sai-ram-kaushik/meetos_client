@@ -11,10 +11,9 @@ const Navabar = () => {
   const [nav, setNav] = useState(false)
   const handleChange = () => {
     setNav(!nav)
-    console.log('clicked')
   }
   return (
-    <div className="w-full h-20 z-[999] sticky -top-0 bg-background">
+    <div className="w-full h-16 z-[999] sticky top-0 bg-background">
       <div className="flex items-center justify-between w-full h-full px-4 lg:px-16">
         <div>
           <h3 className="text-secondary font-extrabold">MEETOS</h3>
