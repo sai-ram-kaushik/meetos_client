@@ -15,7 +15,7 @@ const Hero = () => {
           <p className="lg:w-[500px] text-center lg:text-start">
             <b>MeetOs</b> is a platform connecting tech enthusiasts for
             technical meetups, fostering knowledge sharing and networking within
-            the industry. Join us to expand your tech horizons!
+            the industry. Join us to expand your tech horizons.
           </p>
 
           <div className="flex items-center gap-3">
