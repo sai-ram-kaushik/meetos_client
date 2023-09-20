@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
+import { UserAuth } from "../../context/AuthContext";
 import {
   BsFillPersonFill,
   BsFillTelephoneFill,
@@ -11,7 +12,18 @@ import { TbPassword } from "react-icons/tb";
 import signup from "../../public/assets/images/signup.svg";
 import Button from "../../components/Button";
 import TransitionEffect from "../../components/TransitionEffect";
+import Link from "next/link";
 const index = () => {
+  const { user, googleSignIn, logOut } = UserAuth();
+
+  const handleChange = async () => {
+    try {
+      await googleSignIn();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <TransitionEffect />
@@ -85,8 +97,13 @@ const index = () => {
 
                 <div className="flex flex-col items-center gap-3">
                   <button className="flex items-center gap-3 text-xl border border-secondary p-3 rounded-lg hover:text-primary hover:bg-secondary duration-200">
-                    <FcGoogle size={25} />
-                    Signup with Google
+                    <Link
+                      href="/dashboard"
+                      className="flex items-center gap-3"
+                      onClick={handleChange}>
+                      <FcGoogle size={25} />
+                      Signup with Google
+                    </Link>
                   </button>
                 </div>
               </form>

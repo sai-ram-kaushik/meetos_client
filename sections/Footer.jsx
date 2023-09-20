@@ -4,7 +4,7 @@ import React from 'react';
 // import footer_logo from '../public/logo.png'
 const Footer = () => {
     return (
-        <footer className="text-gray-600 bg-background mt-12  bottom-0 left-0 w-full rounded-tl-[45px] rounded-tr-[45px]">
+        <footer className="bg-background mt-12  bottom-0 left-0 w-full rounded-tl-[45px] rounded-tr-[45px]">
             <div className="container mx-auto flex items-center flex-col sm:flex-row py-8">
                 <Link href="/">
                     <h3>MeetOs</h3>

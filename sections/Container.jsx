@@ -1,7 +1,8 @@
 import React from "react";
 import Button from "../components/Button";
 import Image from "next/image";
-import join_meetup from '../public/assets/images/join_meetup.webp'
+import join_meetup from "../public/assets/images/join_meetup.webp";
+import Link from "next/link";
 const Container = () => {
   return (
     <div className="w-full py-10 p-3">
@@ -14,11 +15,18 @@ const Container = () => {
               support, get out of their comfort zones, and pursue their
               passions, together. Membership is free.
             </p>
-            <Button className="w-[120px]">Sign Up</Button>
+            <Link href="/signin">
+              <Button className="w-[120px]">Sign Up</Button>
+            </Link>
           </div>
 
           <div>
-            <Image src={join_meetup} alt="join_meetup" width={400} height={400} />
+            <Image
+              src={join_meetup}
+              alt="join_meetup"
+              width={400}
+              height={400}
+            />
           </div>
         </div>
       </div>
