@@ -71,7 +71,7 @@ const Navabar = () => {
           </div>
         ) : (
           <div
-            className="flex flex-col items-center"
+            className="flex flex-col items-center cursor-pointer"
             onClick={() => setIsOpen((prev) => !prev)}>
             <Image
               src={user.photoURL}
