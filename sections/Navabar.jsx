@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import { BsFillPersonFill } from "react-icons/bs";
 import { BiMenuAltRight } from "react-icons/bi";
 import { UserAuth } from "../context/AuthContext";
+import { resolve } from "styled-jsx/css";
 import Image from "next/image";
 const Navabar = () => {
   const menuList = [
