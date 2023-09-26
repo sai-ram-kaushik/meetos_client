@@ -25,7 +25,7 @@ const Dasboard = () => {
 
             <div className="flex items-center justify-center">
               <div>
-                
+                Upcoming Events
               </div>
             </div>
         </div>
