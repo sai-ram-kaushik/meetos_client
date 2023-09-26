@@ -4,7 +4,7 @@ import TransitionEffect from "../../components/TransitionEffect";
 const Dasboard = () => {
   const { user } = UserAuth();
   const [loading, setLoading] = useState(true);
-  console.log(user)
+  // console.log(user)
   useEffect(() => {
     const checkAuthentication = async () => {
       await new Promise((resolve) => setTimeout(resolve, 50));
@@ -21,6 +21,12 @@ const Dasboard = () => {
             <div className="container mx-auto flex flex-col gap-3 py-5">
                 <h2>Welcome, {user.displayName} &#128075;</h2>
                 <h3>Events from your communities</h3>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <div>
+                
+              </div>
             </div>
         </div>
       ) : (
