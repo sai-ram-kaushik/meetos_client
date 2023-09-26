@@ -78,7 +78,7 @@ const Navabar = () => {
               width={50}
               height={50}
               alt={user.displayName}
-              className="rounded-full border border-secondary"
+              className="rounded-full border-2 border-secondary"
             />
             {isOpen && (
               <div className="bg-white absolute top-20 flex flex-col items-center rounded-lg p-5 ">
