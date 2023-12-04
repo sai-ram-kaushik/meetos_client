@@ -1,40 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MeetOs - Streamlining Networking at Technical Meetups
+
+Networking at in-person meetups can be challenging. MeetOs is the solution you need to streamline the networking process at technical meetups. Our web app simplifies the interaction by providing a list of registered attendees nearby, allowing you to easily access their professional social profiles for improved connections.
+
+## Features
+
+- **Join a Meetup:** Seamless integration with meetup events, making it easy to become a part of the community.
+
+- **Share Your Profile:** Effortlessly share your profile information and social media pages with fellow attendees.
+
+- **Follow and Engage:** Quickly follow other members and engage with them, fostering meaningful connections.
+
+- **Build Your Brand:** MeetOs empowers you to build your personal brand within the technical community.
+
+## How It Works
+
+Our web app automates the process of networking and sharing social profiles at technical meetups through:
+
+1. **Proximity Matching:** Connect with attendees based on proximity, ensuring you can network efficiently during the event.
+
+2. **Interest-Based Matching:** Find like-minded professionals by matching interests, facilitating more relevant connections.
+
+## Why MeetOs?
+
+- **Efficiency:** Exchange information with ease, saving time and effort during in-person meetups.
+
+- **Effectiveness:** Improve the effectiveness of your networking efforts with targeted connections.
+
+- **Automation:** Let our web app handle the logistics, allowing you to focus on meaningful interactions.
 
 ## Getting Started
 
-First, run the development server:
+To get started with MeetOs, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. **Installation:** Clone this repository to your local machine:
+
+``` sh
+  git clone https://github.com/sai-ram-kaushik/meetos_client.git
 ```
+
+2. **Usage:** Run the following commands:
+
+   ```
+     yarn install
+     yarn dev
+   ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Contact Us
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Have questions or suggestions? Reach out to us:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Email: meetos.community@gmail.com
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Start networking efficiently today with MeetOs!
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
