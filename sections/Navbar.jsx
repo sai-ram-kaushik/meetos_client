@@ -1,23 +1,27 @@
 
-import {  useState } from "react";
-import { menuList } from "@/constants";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { menuList, userMenuList } from "@/constants";
 import { GrFormClose } from "react-icons/gr";
 import { BiMenuAltRight } from "react-icons/bi";
 import { UserAuth } from "@/context/AuthContext";
 import Link from "next/link";
+import Image from "next/image";
 const Navbar = () => {
+  const router = useRouter()
   const [nav, setNav] = useState(false);
   const handleChange = () => {
     setNav(!nav);
   };
   const { user, logout } = UserAuth();
-  const handleSignOut = async() => {
-    try{
+  const handleSignOut = async () => {
+    try {
       await logout()
     } catch (error) {
       console.log(error)
     }
   }
+  console.log(user)
 
   return (
     <nav className='w-full h-20 z-[999] bg-background'>
@@ -50,11 +54,23 @@ const Navbar = () => {
                 </button>
               </Link>
             ) : (
-              <Link href='/login'>
-                <button className='bg-secondary lg:w-[10rem] p-3 rounded-lg text-xl text-background hover:bg-background hover:text-primary border border-secondary duration-200 font-bold ease-in-out' onClick={handleSignOut}>
-                  SignOut
-                </button>
-              </Link>
+              <div className="flex items-center gap-8">
+                {userMenuList.map((list, index) => (
+                  <div className='flex items-center text-xl font-bold' key={index}>
+                    <ul>
+                      <Link href={list.path}>
+                        <li>{list.label}</li>
+                      </Link>
+                    </ul>
+                  </div>
+                ))}
+
+                <Link href='/' onClick={handleSignOut}>
+                  <button className='bg-secondary lg:w-[10rem] p-3 rounded-lg text-xl text-background hover:bg-background hover:text-primary border border-secondary duration-200 font-bold ease-in-out' >
+                    SignOut
+                  </button>
+                </Link>
+              </div>
             )}
           </div>
 

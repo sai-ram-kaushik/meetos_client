@@ -1,19 +1,24 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { UserAuth } from "@/context/AuthContext";
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
+import { useEffect } from "react";
 const Login = () => {
   const router = useRouter()
-  const {user, googleSignIn, logout} = UserAuth()
+  const { user, googleSignIn, logout } = UserAuth()
 
-  const handleSignIn = async() => {
-    try{
+  const handleSignIn = async () => {
+    try {
       await googleSignIn()
     } catch (error) {
       console.log(error)
     }
-    router.push('/dashboard')
   }
+
+  useEffect(() => {
+    { !user ? (" ") : (router.push("/dashboard")) }
+  }, [user])
+  console.log(user)
   return (
     <div className="w-full h-[80vh] p-5">
       <div className="container mx-auto w-full h-full">
@@ -24,12 +29,12 @@ const Login = () => {
 
             <div className="flex flex-col lg:flex-row items-center gap-5">
               <div className="flex items-center gap-3 text-2xl border border-primary p-3 rounded-xl cursor-pointer hover:shadow-xl" onClick={handleSignIn}>
-                <FcGoogle size={30}/>
+                <FcGoogle size={30} />
                 <p>Google</p>
               </div>
 
               <div className="flex items-center gap-3 text-2xl border border-primary p-3 rounded-xl cursor-pointer hover:shadow-xl">
-                <FaGithub size={30}/>
+                <FaGithub size={30} />
                 <p>GitHub</p>
               </div>
             </div>
