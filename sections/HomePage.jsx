@@ -14,7 +14,7 @@ const HomePage = () => {
           </div>
 
           <div>
-            <Image src={homePageVector}  />
+            <Image src={homePageVector} alt="homePage_vector" priority  />
           </div>
         </div>
       </div>

@@ -1,6 +1,19 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import { UserAuth } from "@/context/AuthContext";
+import { useRouter } from 'next/router'
 const Login = () => {
+  const router = useRouter()
+  const {user, googleSignIn, logout} = UserAuth()
+
+  const handleSignIn = async() => {
+    try{
+      await googleSignIn()
+    } catch (error) {
+      console.log(error)
+    }
+    router.push('/dashboard')
+  }
   return (
     <div className="w-full h-[80vh] p-5">
       <div className="container mx-auto w-full h-full">
@@ -10,7 +23,7 @@ const Login = () => {
             <hr />
 
             <div className="flex flex-col lg:flex-row items-center gap-5">
-              <div className="flex items-center gap-3 text-2xl border border-primary p-3 rounded-xl cursor-pointer hover:shadow-xl">
+              <div className="flex items-center gap-3 text-2xl border border-primary p-3 rounded-xl cursor-pointer hover:shadow-xl" onClick={handleSignIn}>
                 <FcGoogle size={30}/>
                 <p>Google</p>
               </div>
