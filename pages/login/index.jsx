@@ -3,9 +3,10 @@ import { FaGithub } from "react-icons/fa";
 import { UserAuth } from "@/context/AuthContext";
 import { useRouter } from 'next/navigation'
 import { useEffect } from "react";
+import TransitionEffect from "@/components/TransitionEffect";
 const Login = () => {
   const router = useRouter()
-  const { user, googleSignIn, logout } = UserAuth()
+  const { user, googleSignIn} = UserAuth()
 
   const handleSignIn = async () => {
     try {
@@ -18,9 +19,9 @@ const Login = () => {
   useEffect(() => {
     { !user ? (" ") : (router.push("/dashboard")) }
   }, [user])
-  console.log(user)
   return (
     <div className="w-full h-[80vh] p-5">
+      <TransitionEffect />
       <div className="container mx-auto w-full h-full">
         <div className="flex items-center justify-center w-full h-full">
           <div className="p-5 bg-white shadow-lg rounded-xl flex flex-col text-center gap-5">
