@@ -1,5 +1,5 @@
 import { connect } from "@/db/dbConfig";
-import User from "@/models/user";
+import User from "@/models/usermodel";
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
@@ -39,10 +39,10 @@ export const authOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    signIn: "/",
+    signIn: "/", // You might want to specify your own sign-in page here
   },
 };
 
-const handler = NextAuth(authOptions);
+const handler = (req, res) => NextAuth(req, res, authOptions);
 
-export { handler as GET, handler as POST };
+export default handler;
