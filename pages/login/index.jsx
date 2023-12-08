@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { axios } from "axios";
 import Image from "next/image";
 import Link from "next/link";
+import TransitionEffect from "@/components/TransitionEffect";
 const Login = () => {
   const [user, setUser] = useState({
     email: "",
@@ -16,6 +17,7 @@ const Login = () => {
   const onLogin = async () => {};
   return (
     <div className='w-full h-[80vh] p-5 lg:p-0'>
+      <TransitionEffect />
       <div className='container mx-auto w-full h-full'>
         <div className='flex items-center justify-center w-full h-full'>
           <div className='flex flex-col items-center gap-10'>

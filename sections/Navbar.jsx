@@ -48,7 +48,7 @@ const Navbar = () => {
               </div>
             ))}
             {!user ? (
-              <Link href='/login'>
+              <Link href='/signup'>
                 <button className='bg-secondary lg:w-[10rem] p-3 rounded-lg text-xl text-background hover:bg-background hover:text-primary border border-secondary duration-200 font-bold ease-in-out'>
                   Login / Register
                 </button>
