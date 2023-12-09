@@ -38,7 +38,7 @@ const Navbar = () => {
               </div>
             ))}
               <Link href='/signup'>
-                <button className='bg-secondary lg:w-[10rem] p-3 rounded-lg text-xl text-background hover:bg-background hover:text-primary border border-secondary duration-200 font-bold ease-in-out'>
+                <button className='bg-secondary p-3 rounded-lg text-xl text-background hover:bg-background hover:text-primary border border-secondary duration-200 font-bold ease-in-out'>
                   Login / Register
                 </button>
               </Link>
