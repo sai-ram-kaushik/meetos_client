@@ -65,7 +65,7 @@ const SignUp = () => {
 
 
   return (
-    <div className='w-full lg:h-[80vh] p-5 lg:p-0'>
+    <div className='w-full lg:h-[90vh] p-5 lg:p-0'>
       <TransitionEffect />
       <div className='container mx-auto w-full h-full'>
         <div className='flex items-center justify-center w-full h-full'>
